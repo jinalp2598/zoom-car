@@ -1,0 +1,22 @@
+.Navbar{
+    background-color: black;
+    height: 100px;
+    /* justify-content: space-between; */
+}
+.register{
+    padding-top: 30px;
+  margin-left: 20px;
+}
+.register button{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.Navbar-login{
+    margin-left: 57%;
+    display: flex;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+}
+.Navbar-type{
+    margin-top: 30px;
+}

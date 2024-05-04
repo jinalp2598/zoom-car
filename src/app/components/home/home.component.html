@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="booking">
+        <img src="assets/images/zoomback.png">
+        <form class="bookingText" id="form">
+            <select [(ngModel)]= "fromLocation" name="fromLocation" class="form-control" id="start">
+                <option value="">Pick Up Cites Airport,Hotel</option>
+                <option *ngFor="let Location of locations" [value]="Location.locationId">{{Location.title}}</option>
+            </select>
+
+            <select [(ngModel)]= "toLocation" name="toLocation" class="form-control" id="start">
+                <option value="">Drop off Cites Airport,Hotel</option>
+                <option *ngFor="let Location of locations" [value]="Location.locationId">{{Location.title}}</option>
+            </select>
+            <!-- <input placeholder="Pick Up Cites Airport,Hotel">
+            <input placeholder="Drop Off Cites Airport,Hotel"> -->
+            <button id="primaryButton" class="btn btn-success" (click)="navigateToSearchPage()">FIND CARS</button>
+
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <h3>POPULAR CARS</h3>
+        </div>
+    </div>
+
+    <div class="car-list">
+        <div class="row car-list-home">
+            <div class="col-3" *ngFor="let car of popularCars">
+                <app-car-card [carData]="car"></app-car-card>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

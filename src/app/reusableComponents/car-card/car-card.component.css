@@ -1,0 +1,49 @@
+
+/* .car-list-properties p{
+    margin-left: 5px;
+} */
+.car-list-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* This will take care of spacing between cards */
+    gap: 20px; /* Gap between cards */
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+}
+/* .car-list-card {
+    /* flex: 1 1 calc(25% - 20px); Calculate width for 4 cards per row minus gap */
+    /* Additional styling for your cards */
+  
+/* } */
+
+.car-list-ratings p{
+    margin: 10px;
+}
+.car-list-card{
+    height: 360px;
+    width: 300px;
+    /* gap: 10px; */
+}
+
+.car-list-bottom {
+    justify-content: space-between;
+}
+
+/* .car-list{
+    display: flex;
+} */
+.car-list-properties {
+    display: flex;
+    flex-direction: row; /* or column, depending on your preference */
+    /* align-items: center; Aligns items vertically center, useful for row direction */
+    /* justify-content: center; Centers items horizontally, useful for row direction */
+}
+
+.car-list-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line if there's not enough space */
+    gap: 10px; /* Optional: adds space between items */
+    justify-content: start; /* Centers items horizontally, can be adjusted */
+    align-items: flex-start; /* Aligns items at the start of the container vertically */
+}

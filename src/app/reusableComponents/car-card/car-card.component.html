@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="car-list-cards-container">
+    <div class="car-list-card border border-danger">
+        <div *ngIf="carData" class="car-list-img">
+            <!-- <img [src]="carData?.imageUrl" alt="img" width="250"> -->
+            <img [src]="carData?.imageUrl" (error)="errorHandler($event)" alt="img" height="150" width="298">
+
+            <!-- <img [src]="carData?.imageUrl" (error)="this.src='assets/images/zoomlogo.png';" alt="img" width="250"> -->
+
+        </div>
+        <div class="car-list-ratings d-flex">
+            <button class="border-0 bg-white"><i class="far fa-heart"></i></button>
+            <p>4.5</p>
+        </div>
+        <div class="car-list-title">
+            <h4>{{carData?.brand}} {{carData?.name}}</h4>
+        </div>
+        <!-- <div class="car-list-properties" *ngFor="let details of carData?.carAccessoriess ">
+           <p class="car-list"> {{details?.accessoriesTitle}}</p>
+
+        </div> -->
+
+        <div class="car-list-container">
+            <div class="car-list-properties" *ngFor="let details of carData?.carAccessoriess">
+               <p class="car-list">{{details?.accessoriesTitle}}</p>
+            </div>
+        </div>
+        <hr style="height:3px">
+        <div class="car-list-card-price-availability-text">
+            {{carData?.registeredOn |date: 'dd-mm-yyyy'}}
+        </div>
+        <div class="car-list-bottom d-flex">
+            <div class="car-list-card-price-title">
+                ₹{{carData?.pricingDescription}}
+            </div>
+            <div class="car-list-card-distance d-flex">
+                <button class="border-0 bg-white"><i class="fa fa-map-marker"
+                        style="font-size:20px;color:black"></i></button>
+                <div class="car-list-card-distance-place">
+                    {{carData?.locationTitle}}
+                </div>
+            </div>
+            <!-- <div class="car-list-card-price-sub-title">
+
+            </div> -->
+
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>

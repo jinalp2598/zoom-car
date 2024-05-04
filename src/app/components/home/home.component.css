@@ -1,0 +1,39 @@
+.booking {
+    position: relative;
+    text-align: center; /* Center the content */
+    width: 100%; /* Adjust based on your needs */
+}
+
+.booking img {
+    width: 100%; /* Make image fill the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.bookingText {
+    position: absolute;
+    top: 50%; /* Adjust this value to position the form as needed */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the form on the image */
+    width: 80%; /* Adjust based on your needs */
+    max-width: 500px; /* Optional: Prevents the form from being too wide on large screens */
+}
+
+.bookingText input,
+.bookingText button {
+    width: 100%;
+    margin: 10px 0; /* Adds space between inputs and the button */
+    padding: 10px; /* Increase input field and button size */
+}
+
+/* Enhance the appearance of the input fields and button */
+.bookingText input {
+    border: 2px solid #ccc; /* Border style for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+}
+
+.bookingText button {
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Change cursor to pointer when hovering over the button */
+    font-size: 16px; /* Increase font size for better readability */
+}
